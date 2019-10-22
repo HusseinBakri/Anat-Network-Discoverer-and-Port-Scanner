@@ -1,5 +1,5 @@
 # Anat-Network-Discoverer-and-Port-Scanner
-Anat is a network discoverer and a port scanner of common vulnerabilities, written in Python. This is an Ethical Hacker Educational tool used for educational purposes only (please see code of conduct). The tool is similar to a simple version of the famous [nmap](https://linux.die.net/man/1/nmap) tool: a network exploration tool and port scanner. The tool is also similar to a simple version of the [Debian Netdiscover](https://manpages.debian.org/unstable/netdiscover/netdiscover.8.en.html) which is an ARP reconnaissance tool.
+Anat is a network discoverer and a port scanner that is written in Python. This is an Ethical Hacker Educational tool used for educational purposes only (please see code of conduct). The tool is similar to a simple version of the famous [nmap](https://linux.die.net/man/1/nmap) tool: a network exploration tool and port scanner. The tool is also similar to a simple version of the [Debian Netdiscover](https://manpages.debian.org/unstable/netdiscover/netdiscover.8.en.html) which is an ARP reconnaissance tool.
 
 The tool is part of an ethical hacker educational toolset which is normally taught in ethical hacking and computer security degrees or courses (please see code of conduct). 
 
@@ -118,7 +118,8 @@ The binary will be stored in the dist folder.
 ## Creating a Linux OS executable of Adonis
 The process is exactly similar. The good thing in Linux is that binaries in Linux don't get executed by just making the target user double click them, they need to be run from the terminal after chmod +x makes them executable. This is why Linux rocks, the good thing it is very difficult a experience Linux users (in social enginering, a white hat hacker is hired by many companies these days to test not only the security of networks and systems but also in similar vein to test the gullibility of the company's clerks by the black hat hacker pretending to be from the IT department! 
 
-# Enhancements
+# Enhancements/TODO
+* Check the banner received from open network ports in PortScanner.py with the most vulnerabilities discovered.
 
 
 ## Avoiding antiviruses
