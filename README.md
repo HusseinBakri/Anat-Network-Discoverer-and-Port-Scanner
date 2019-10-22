@@ -1,13 +1,13 @@
 # Anat-Network-Discoverer-and-Port-Scanner
-Anat is a network discover and a port scanner for vulnerabilities written in Python. This is an Ethical Hacker Educational tool used for educational purposes only (please see code of conduct). The tool is similar to a simple version of the famous [nmap](https://linux.die.net/man/1/nmap) (a network exploration tool and port scanner). The tool is also similar to a simple version of the (Debian Netdiscover](https://manpages.debian.org/unstable/netdiscover/netdiscover.8.en.html) which is a famous ARP reconnaissance tool.
+Anat is a network discoverer and a port scanner of common vulnerabilities, written in Python. This is an Ethical Hacker Educational tool used for educational purposes only (please see code of conduct). The tool is similar to a simple version of the famous [nmap](https://linux.die.net/man/1/nmap) tool: a network exploration tool and port scanner. The tool is also similar to a simple version of the [Debian Netdiscover](https://manpages.debian.org/unstable/netdiscover/netdiscover.8.en.html) which is an ARP reconnaissance tool.
 
-The tool is part of an Ethical Hacker Educational toolset taught normally in ethical hacking and computer security degrees/courses (please see code of conduct). 
+The tool is part of an ethical hacker educational toolset which is normally taught in ethical hacking and computer security degrees or courses (please see code of conduct). 
 
 Tanit Keylogger is part of a toolset of Ethical Hacking tools that I will publish gradually on Github.
 1. Tanit Keylogger (Language: Python) - Go to [repository URL](https://github.com/HusseinBakri/Tanit-Keylogger "Tanit Keylogger").
 2. Adonis ARP Spoofer (Language: Python), - Go to [repository URL](https://github.com/HusseinBakri/Adonis-ARP-Spoofer "Adonis ARP Spoofer").
 3. Simple MAC Changer (Language: Python), repository URL (will be added later).
-4. Anat Network Scanner (Language: Python), current repository.
+4. Anat Network Discoverer and Port Scanner (Language: Python), **current repository**.
 5. Hadad Packet Sniffer (Language: Python), repository URL (will be added later).
 6. Shahar DNS Spoofer (Language: Python), repository URL (will be added later).
 7. Sweet Death Virus (Language: Python), repository URL (will be added later).
@@ -22,9 +22,9 @@ Tanit Keylogger is part of a toolset of Ethical Hacking tools that I will publis
 # Description
 
 # Requirements
-You need to install the following Python 3 modules:
-*termcolor for coloring the terminal text
-*scapy module for the communication using ARP
+You need to install the following Python 3 modules. You can install it by pip3 or any other method you that you are confortable with:
+* ***termcolor*** module for coloring the terminal text
+* ***scapy*** module for the communication using ARP
 
 ## Irrealistic usage (educational)
 
