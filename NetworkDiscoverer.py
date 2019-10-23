@@ -40,7 +40,7 @@ def PrintResults(Found_devices_list):
 		print("IP\t\tAt MAC Address\t\tMAC Vendor/Hostname\n")
 		print("-----------------------------------------------------------")
 		for device in Found_devices_list:
-			print(device["ip"] + "\t\t\t" + device["mac"] + "\t\t\t" + device["mac_vendor"]  + "\n")
+			print(device["ip"] + "\t\t" + device["mac"] + "\t\t" + device["mac_vendor"]  + "\n")
 
 
 def main():
