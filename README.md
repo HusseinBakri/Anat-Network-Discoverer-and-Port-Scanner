@@ -1,5 +1,5 @@
 # Anat-Network-Discoverer-and-Port-Scanner
-Anat is a network discoverer and a port scanner that is written in Python. This is an ethical hacking educational tool used for educational purposes only (please see code of conduct). The tool is similar to a simple version of the famous [nmap](https://linux.die.net/man/1/nmap) tool: a network exploration tool and a port scanner. The tool is also similar to a simple version of the [Debian Netdiscover](https://manpages.debian.org/unstable/netdiscover/netdiscover.8.en.html) which is an ARP reconnaissance tool.
+Anat is a network discoverer and a port scanner that is written in Python. This is an ethical hacking educational tool used for educational purposes only (please see code of conduct). The tool is similar to a simple version of the famous [nmap](https://linux.die.net/man/1/nmap) tool: a network exploration tool and a port scanner. The tool is also similar to a simple version of the [Debian Netdiscover](https://manpages.debian.org/unstable/netdiscover/netdiscover.8.en.html) which is an ARP reconnaissance tool. Anat is named after the war Goddess of the Phoenician.
 
 The tool is part of an ethical hacking educational toolset which is normally taught in ethical hacking and computer security degrees or courses (please see code of conduct). 
 
@@ -45,7 +45,6 @@ Or
 python3 PortScanner.py - H 192.168.0.17 -p 22,80,443,560
 ```
 
-
 # Packaging
 You need the pyinstaller. You can install it via pip or pip3 or via apt package manager.
 ```
@@ -88,14 +87,14 @@ To install pynput (why? as mentioned above, you need to do that as even this mod
 wine python.exe -m pip install pynput
 ```
 
-You can then package Anit into a single executable:
+You can then package Anat into a single executable:
 
 ```
 wine /root/.wine/drive_c/Python27/Scripts/pyinstaller.exe  NetworkDiscoverer.py --onefile 
 ```
 The binary will be stored in the dist folder.
 
-## Creating a Mac OS executable of Tanit
+## Creating a Mac OS executable of Anat
 If you are on a Mac OS, the process is the same for installing 'pyinstaller'. First install pyinstaller through latest pip - with sudo privileges. NB: it is better to get the latest pip so to avoid errors. 
 
 ```
@@ -109,7 +108,7 @@ pyinstaller main.py --onefile
 ```
 The binary will be stored in the dist folder.
 
-## Creating a Linux OS executable of Adonis
+## Creating a Linux OS executable of Anat
 The process is similar to what is explained in the previous sections. The good thing in Linux is that binaries like this tool don't get executed by just making the user double click them, they need to be run from the terminal after chmod +x makes them executable. 
 
 # Enhancements/TODO
