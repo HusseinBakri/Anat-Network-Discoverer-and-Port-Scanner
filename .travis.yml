@@ -1,0 +1,12 @@
+language: python
+python:
+  - 3.7
+
+install:
+  - pip3 install termcolor 
+  - pip install scapy 
+  - pip install mac_vendor_lookup
+
+script:
+  - python3 NetworkDiscoverer.py
+  - python3 PortScanner.py
