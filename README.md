@@ -28,13 +28,13 @@ You need to install the following Python modules. You can install them by pip3 o
 * ***mac_vendor_lookup*** for getting the MAC vendor name
 
 ## Usage 
-To use ***NetworkDiscoverer.py***, you need to find your IP and subnet mask from terminal/command line via ifconfig(Linux/Mac) or ipconfig(Windows) and get the subnet. 
+To use ***NetworkDiscoverer.py***, you need to find your IP and subnet mask from terminal/command line via ifconfig(Linux/Mac) or ipconfig (MS Windows) and get the subnet. 
 ```
 python3 NetworkDiscoverer.py - t 172.18.45.0/24
 ```
-This will scan the whole network and print all devices connected to you on your network including IPs, MAC addresses and MAC vendor names.
+This will scan the whole network and will print all the devices connected to your network including all IPs, MAC addresses and MAC vendor names.
 
-To use ***PortScanner.py***, you need a target machine IP or domain name and to specify one or more port to scan, so you can know if they are open or closed.
+To use ***PortScanner.py***, you need a target machine IP or a domain name and you need to specify one or more ports to scan, so you can know if they are open or close.
 ```
 python3 PortScanner.py - H 172.18.45.22 -p 80
 ```
@@ -45,15 +45,15 @@ python3 PortScanner.py - H 172.18.45.22 -p 22,80,443,560
 
 
 # Packaging
-You need the pyinstaller. You can install it via pip or pip3 or via apt package manager vel cetera
+You need the pyinstaller. You can install it via pip or pip3 or via apt package manager.
 ```
 pip install pyinstaller
 ```
 
-A program called pyinstaller is installed in the Python directory. On Windows it would be an executable: pyinstaller.exe
+A program called ***pyinstaller*** is installed in the Python directory. On Windows it would be an executable: pyinstaller.exe
 
 ## How to package as executable from Windows
-To package the file as an .exe for Windows, move your python file(s) to a folder and run pyinstaller - the --onefile is needed especially when you have many python files.:
+To package the file as a .exe for MS Windows, move your python file(s) to a folder and run pyinstaller as follows - NB: the --onefile is needed especially when you have many python files:
 
 ```
 pyinstaller PortScanner.py --onefile
@@ -64,15 +64,15 @@ and
 ```
 pyinstaller NetworkDiscoverer.py --onefile
 ```
-Your .exe will be find in the dist generated folder.
+Your .exe will be found in the dist folder.
 
 ## Create a Windows .exe executable out of a python project from a Linux OS/Mac OS
-As you know to run a Windows .exe or .msi or anything similar on a Linux OS (even on Mac OS) you need a lovely program called  [wine](https://www.winehq.org/). I would assume you have installed wine on Linux. Go to the official Python Website and download the right Python 2.7.x msi installation file or (whatever for Python 3.x.x). Navigate on your Linux to the directory of the download directory of this file and then run the following command: (/i is for installing):
+As you know, in order to run a Windows .exe or .msi or anything similar on a Linux OS or even on Mac OS, you need a lovely program called  [wine](https://www.winehq.org/). I would assume you have installed wine on Linux. Go to the official Python Website and download the right Python 2.7.x msi installation file or (whatever version for Python 3.x.x). Navigate on your Linux to the directory of the download folder of this file and then run the following command: (/i is for installing):
 ```
 wine msiexec /i python-2.7.14.msi
 ```
-You will get a normal installation process as you would have on any MS Windows OS, please follow the instruction to install the Python interpreter. All Programs are usually installed in wine in a hidden folder called '.wine' in the Home Folder of the user. So probably your Windows Python will be 
-installed in ~/.wine/drive_c/Python27/ and in there all the cool executable that normally are installed like Python.exe .... Naviagate to this folder and run via wine the Python interpreter invoking pip in order for you to install as above the 'pyinstaller' module.
+You will get a normal installation process as you would have on any MS Windows OS, please follow the instructions to install the Python interpreter. All Programs are usually installed in wine in a hidden folder called '.wine' in the Home Folder of the user. So probably your Windows Python will be 
+installed in ~/.wine/drive_c/Python27/ and in there all the executables are located which are normally installed with any Python interpreter like Python.exe, pip.exe etc. Naviagate to this folder and run via wine the Python interpreter invoking pip in order for you to install as above the 'pyinstaller' module.
 
 PS: wine does not access the pip modules of the Linux so this why you need to do this.
 ```
@@ -80,13 +80,13 @@ cd ~/.wine/drive_c/Python27/
 wine python.exe -m pip install pyinstaller
 ```
 After the installation of the module successively terminates, you will find the pyinstalller.exe in the Scripts directory.
-To install pynput (why? as mentioned above, you need to do that as even this module is installed on Linux OS, the Windows Python interpreter needs this)
+To install pynput (why? as mentioned above, you need to do that as even this module is installed on Linux OS level, the Windows Python interpreter needs this)
 
 ```
 wine python.exe -m pip install pynput
 ```
 
-You can then package Anit tools into a single executable:
+You can then package Anit tool into a single executable:
 
 ```
 wine /root/.wine/drive_c/Python27/Scripts/pyinstaller.exe  NetworkDiscoverer.py --onefile 
@@ -108,15 +108,15 @@ pyinstaller main.py --onefile
 The binary will be stored in the dist folder.
 
 ## Creating a Linux OS executable of Adonis
-The process is exactly similar. The good thing in Linux is that binaries in Linux don't get executed by just making the target user double click them, they need to be run from the terminal after chmod +x makes them executable. 
+The process is exactly similar. The good thing in Linux is that binaries like this tool in Linux don't get executed by just making the user double click them, they need to be run from the terminal after chmod +x makes them executable. 
 
 # Enhancements/TODO
 ***For PortScanner.py***:
-* Check the banner received from open network ports in PortScanner.py with the most vulnerabilities discovered in a text file.
-* Let users include ranges such as -p 22-300 since now only comma seperated ports or single port. Try to make it work with a mixture of ranges and comma sperated values eg: -p 22,45,50-90  meaning port 22 port 45 and all ports 50 to 90.
+* Compare the banner received from open network ports with the most vulnerabilities discovered. Vulnerabilities are store either in a file or a sqlite database.
+* Let users include ranges of ports such as -p 22-300 since now we can only write comma seperated ports or single port. Try to make it work with a mixture of ranges and comma sperated values eg: -p 22,45,50-90  meaning port 22 port 45 and all ports 50 to 90.
 
 ***For NetworkDiscoverer.py***:
-* Let the tool find automatically the IP and Subnet mask and then create a optargs option to say something like --mynet and this would make the process more automatic. This would be cool as it will allow hackers to just run the program and get everybody connected on the network
+* Let the tool find automatically the IP and Subnet mask of the machine it is running on and then create an optargs option to say something like --mynet and this would make the process more automatic. This would be cool as it will allow hackers to just run the program without specifying an IP and would retrieve all devices connected on the network.
 
 
 # License
