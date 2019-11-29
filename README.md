@@ -38,7 +38,8 @@ To use ***NetworkDiscoverer.py***, you need to find your IP and subnet mask from
 ```
 python3 NetworkDiscoverer.py -t 192.168.0.0/24
 ```
-This will scan the whole subnet and will print all the devices connected to your network including all IPs, MAC addresses and MAC vendor names.
+This will scan the whole subnet and will print all the devices connected to your network including all IPs, MAC addresses and MAC vendor names. You can figure out from Vendor names if it is an Apple iPhone etc...
+![alt text](https://raw.githubusercontent.com/HusseinBakri/Anat-Network-Discoverer-and-Port-Scanner/master/Images/Anat_Network_Discoverer.PNG)
 
 To use ***PortScanner.py***, you need a target machine IP or a discoverable domain name and you need to specify one or more ports to scan, so you can know if they are open or close.
 ```
