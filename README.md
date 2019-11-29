@@ -33,7 +33,7 @@ You need to install the following Python modules. You can install them by using 
 * ***mac_vendor_lookup*** for getting the MAC vendor name
 
 ## Usage 
-To use ***NetworkDiscoverer.py***, you need to find your IP and subnet mask from your terminal/command line via ifconfig (Linux/MacOS) or ipconfig (MS Windows) and get the subnet. In the following example using such subnet ***ideally*** scan for all the devices connected to your router since the majority of home router usually have by default an internal IP of 192.168.0.1 - of course change IP according to your situation.  
+To use ***NetworkDiscoverer.py***, you need to find your IP and subnet mask from your terminal/command line via ifconfig (Linux/MacOS) or ipconfig (MS Windows) and get the subnet. In the following example: by using such subnet ***ideally***, you are scanning for all the devices connected to your router since the majority of home routers usually have by default an internal IP of 192.168.0.1 - of course change this IP according to your situation.  
 
 ```
 python3 NetworkDiscoverer.py -t 192.168.0.0/24
