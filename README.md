@@ -24,6 +24,7 @@ Anat is part of a toolset of ethical hacking tools that I will publish gradually
 Anat constitutes two Python files:
 * ***NetworkDiscoverer.py*** is an ARP reconnaissance tool that displays all IPs, MAC addresses and MAC vendor names of all the devices connected to your network.
 * ***PortScanner.py*** is a port scanner that scan specified ports on a device/machine and check whether the ports are open or close.
+* ***PingScanner.py*** is a icmp scanner (i.e. ping scanner) that scan a range of IPs and check if hosts are reachable
 
 # Requirements
 You need to install the following Python modules. You can install them by using pip3 or any other method that you are confortable with:
@@ -46,6 +47,20 @@ Or
 ```
 python3 PortScanner.py - H 192.168.0.17 -p 22,80,443,560
 ```
+To use ***PingScanner.py***, you need to specify a baseIP (via the argument --base) and a range between 0 and 255 in the form of 30-100 via the --range argument.
+
+```python PingScanner.py  --base 172.217.169 --range 46-48```
+
+When you provide less than 3 IP parts as a base, the tool fills out the missing parts with 0 which is the samebehaviour used by the
+socket class in Python. The following ranges of IPs would be 172.217.0.26 to 172.217.0.56
+
+```python PingScanner.py  --base 172.217 --range 46-56```
+
+If you do not specify a range, the tool will ping only the base IP and considers it as a complete IP.
+
+```python PingScanner.py  --base 172.217.20.2```
+
+[[https://github.com/HusseinBakri/Anat-Network-Discoverer-and-Port-Scanner/blob/master/Images/Anat_Ping_Scanner.PNG|alt=Anat Ping Scanner]]
 
 # Packaging
 You need the pyinstaller. You can install it via pip or pip3 or via apt package manager.
