@@ -60,7 +60,8 @@ If you do not specify a range, the tool will ping only the base IP and considers
 
 ```python PingScanner.py  --base 172.217.20.2```
 
-[[https://github.com/HusseinBakri/Anat-Network-Discoverer-and-Port-Scanner/blob/master/Images/Anat_Ping_Scanner.PNG]]
+[]]
+![alt text](https://raw.githubusercontent.com/HusseinBakri/Anat-Network-Discoverer-and-Port-Scanner/master/Images/Anat_Ping_Scanner.PNG)
 
 # Packaging
 You need the pyinstaller. You can install it via pip or pip3 or via apt package manager.
