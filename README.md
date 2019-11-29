@@ -41,6 +41,13 @@ python3 NetworkDiscoverer.py -t 192.168.0.0/24
 This will scan the whole subnet and will print all the devices connected to your network including all IPs, MAC addresses and MAC vendor names. You can figure out from Vendor names if it is an Apple iPhone etc...
 ![alt text](https://raw.githubusercontent.com/HusseinBakri/Anat-Network-Discoverer-and-Port-Scanner/master/Images/Anat_Network_Discoverer.PNG)
 
+I have added a cool feature. You can specify only --mynet and the tool discover for you IP and gateway and then construct the right subnet for you. It could not be more easy. This feature makes the process automatic. It will allow ethical hackers to just run the program without specifying an IP. The tool will then retrieve all the devices connected to the network.
+
+```
+python3 NetworkDiscoverer.py --mynet
+```
+![alt text](https://raw.githubusercontent.com/HusseinBakri/Anat-Network-Discoverer-and-Port-Scanner/master/Images/Anat_Network_Discoverer2.PNG)
+
 To use ***PortScanner.py***, you need a target machine IP or a discoverable domain name and you need to specify one or more ports to scan, so you can know if they are open or close.
 ```
 python3 PortScanner.py -H 192.168.0.20 -p 80
@@ -138,9 +145,6 @@ The process is similar to what is explained in the previous sections. The good t
 ***For PortScanner.py***:
 * Compare the banner information received from the open network ports with the most vulnerabilities discovered. Vulnerabilities would be stored either in a file or in a sqlite database.
 * Let users include ranges of ports such as -p 22-300 since now we can only write comma seperated ports or single port. Try to make it work with a mixture of ranges and comma sperated values eg: -p 22,45,50-90  meaning port 22, port 45 and all ports from 50 to 90.
-
-***For NetworkDiscoverer.py***:
-* Let the tool find automatically the IP and Subnet mask of the machine that it is running on and then create an optargs option to say something like --mynet. This feature would make the process more automatic. This would be cool as it will allow hackers to just run the program without specifying an IP and would retrieve all devices connected tp the network.
 
 # License
 This program is licensed under MIT License - you are free to distribute, change, enhance and include any of the code of this application in your tools. I only expect adequate attribution and citation of this work. The attribution should include the title of the program, the author (me!) and the site or the document where the program is taken from.
