@@ -43,12 +43,16 @@ This will scan the whole subnet and will print all the devices connected to your
 
 To use ***PortScanner.py***, you need a target machine IP or a discoverable domain name and you need to specify one or more ports to scan, so you can know if they are open or close.
 ```
-python3 PortScanner.py -H 192.168.0.17 -p 80
+python3 PortScanner.py -H 192.168.0.20 -p 80
 ```
+![alt text](https://raw.githubusercontent.com/HusseinBakri/Anat-Network-Discoverer-and-Port-Scanner/master/Images/Anat_Port_Scanner.PNG)
+
 Or
 ```
-python3 PortScanner.py - H 192.168.0.17 -p 22,80,443,560
+python3 PortScanner.py -H 192.168.0.20 -p 22,80,443,560
 ```
+![alt text](https://raw.githubusercontent.com/HusseinBakri/Anat-Network-Discoverer-and-Port-Scanner/master/Images/Anat_Port_Scanner2.PNG)
+
 To use ***PingScanner.py***, you need to specify a baseIP (via the argument --base) and a range between 0 and 255 in the form of 30-100 via the --range argument.
 
 ```python PingScanner.py  --base 172.217.169 --range 46-48```
